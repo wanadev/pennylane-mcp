@@ -1,0 +1,44 @@
+{
+  "name": "pennylane-mcp-server",
+  "version": "0.2.0",
+  "description": "MCP server for the Pennylane v2 API — auto-generated from the official OpenAPI spec.",
+  "type": "module",
+  "main": "build/server.js",
+  "bin": {
+    "pennylane-mcp": "build/server.js"
+  },
+  "files": [
+    "build",
+    "openapi"
+  ],
+  "scripts": {
+    "sync:openapi": "tsx scripts/sync-openapi.ts",
+    "generate": "tsx scripts/generate-tools.ts",
+    "build": "tsc",
+    "prepare": "npm run generate && npm run build",
+    "start": "node build/server.js",
+    "dev": "tsx src/server.ts"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pennylane",
+    "accounting",
+    "claude"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "axios": "^1.7.0",
+    "commander": "^12.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
