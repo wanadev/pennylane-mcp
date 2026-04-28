@@ -1,10 +1,6 @@
-# pennylane-mcp-server
+# pennylane-mcp
 
 MCP server for the [Pennylane v2 API](https://pennylane.readme.io/), auto-generated from the official OpenAPI spec. Exposes **165 tools** covering customers, invoices, suppliers, products, transactions, ledger entries, journals, quotes, categories, and more.
-
-## Why this exists
-
-The previous `pennylane-mcp-server@0.1.0` (released Q2 2025) targeted the MCP SDK 1.7 (current is 1.29) and shipped only ~16 hand-written tools, several of which hit non-existent routes (e.g. `GET /customer/{id}` instead of `GET /customers/{id}`). This rewrite generates every tool directly from Pennylane's published OpenAPI spec, so the surface stays in sync with the API and avoids hand-written drift.
 
 ## Install & run
 
@@ -13,13 +9,13 @@ Requires Node.js 18.17+.
 ### From npm (once published)
 
 ```bash
-npx -y pennylane-mcp-server
+npx -y @wanadev/pennylane-mcp
 ```
 
 ### From source
 
 ```bash
-git clone <this-repo> && cd pennylane-mcp-server
+git clone <this-repo> && cd pennylane-mcp
 npm install   # runs `npm run generate && npm run build` via prepare
 node build/server.js
 ```
@@ -45,7 +41,7 @@ Edit your Claude Desktop config:
   "mcpServers": {
     "pennylane": {
       "command": "npx",
-      "args": ["-y", "pennylane-mcp-server"],
+      "args": ["-y", "@wanadev/pennylane-mcp"],
       "env": {
         "PENNYLANE_API_KEY": "your-token-here"
       }

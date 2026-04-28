@@ -1,5 +1,5 @@
 {
-  "name": "pennylane-mcp-server",
+  "name": "@wanadev/pennylane-mcp",
   "version": "0.2.0",
   "description": "MCP server for the Pennylane v2 API — auto-generated from the official OpenAPI spec.",
   "type": "module",
@@ -7,18 +7,23 @@
   "bin": {
     "pennylane-mcp": "build/server.js"
   },
-  "files": [
-    "build",
-    "openapi"
-  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "sync:openapi": "tsx scripts/sync-openapi.ts",
     "generate": "tsx scripts/generate-tools.ts",
     "build": "tsc",
     "prepare": "npm run generate && npm run build",
+    "prepublishOnly": "npm run build",
     "start": "node build/server.js",
     "dev": "tsx src/server.ts"
   },
+  "files": [
+    "build",
+    "openapi",
+    "README.md"
+  ],
   "keywords": [
     "mcp",
     "model-context-protocol",
@@ -26,7 +31,12 @@
     "accounting",
     "claude"
   ],
+  "author": "Wanadev",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wanadev/pennylane-mcp"
+  },
   "engines": {
     "node": ">=18.17"
   },
