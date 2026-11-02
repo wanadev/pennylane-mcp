@@ -27,7 +27,7 @@ async function main(): Promise<void> {
   const text = await res.text();
   // Validate it parses.
   const json = JSON.parse(text) as { paths?: Record<string, unknown>; info?: { version?: string } };
-  await writeFile(OUT, JSON.stringify(json, null, 2));
+  await writeFile(OUT, text);
 
   const after = Object.keys(json.paths ?? {}).length;
   const version = json.info?.version ?? 'unknown';
