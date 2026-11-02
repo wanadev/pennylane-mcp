@@ -4,7 +4,7 @@ MCP server for the [Pennylane v2 API](https://pennylane.readme.io/), auto-genera
 
 ## Install & run
 
-Requires Node.js 18.17+.
+Requires Node.js 22.12+.
 
 ### From npm (once published)
 
