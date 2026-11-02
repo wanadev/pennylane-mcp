@@ -7,7 +7,7 @@ import { PennylaneClient } from './client.js';
 import { registerAllTools } from './generated/tools.js';
 
 const SERVER_NAME = 'pennylane';
-const SERVER_VERSION = '0.2.0';
+const SERVER_VERSION = '0.3.0';
 
 async function main(): Promise<void> {
   program

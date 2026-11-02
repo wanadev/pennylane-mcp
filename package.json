@@ -1,6 +1,6 @@
 {
   "name": "@wanadev/pennylane-mcp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "MCP server for the Pennylane v2 API — auto-generated from the official OpenAPI spec.",
   "type": "module",
   "main": "build/server.js",
