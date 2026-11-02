@@ -1,6 +1,6 @@
 # pennylane-mcp
 
-MCP server for the [Pennylane v2 API](https://pennylane.readme.io/), auto-generated from the official OpenAPI spec. Exposes **165 tools** covering customers, invoices, suppliers, products, transactions, ledger entries, journals, quotes, categories, and more.
+MCP server for the [Pennylane v2 API](https://pennylane.readme.io/), auto-generated from the official OpenAPI spec. Exposes **183 tools** covering customers, invoices, suppliers, products, transactions, ledger entries, journals, quotes, categories, and more.
 
 ## Install & run
 
@@ -89,14 +89,14 @@ src/
 ├── client.ts          Axios-based Pennylane client (Bearer auth, error wrapping)
 ├── auth.ts            Resolves API key from env / CLI flag
 └── generated/
-    └── tools.ts       165 registerTool() calls, generated from OpenAPI
+    └── tools.ts       183 registerTool() calls, generated from OpenAPI
 
 scripts/
 ├── sync-openapi.ts    Re-fetch the OpenAPI spec
 └── generate-tools.ts  OpenAPI → src/generated/tools.ts
 
 openapi/
-└── accounting.json    Vendored OpenAPI 3.0 spec (1.9 MB, 120 paths, 165 ops)
+└── accounting.json    Vendored OpenAPI 3.0 spec (~2 MB, 131 paths, 183 ops)
 ```
 
 ## Limits
